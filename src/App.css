@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section-center {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 90%;
+}
+/* ======================= Model ========================= */
+.model-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 100;
+}
+.model-con {
+    width: 80vw;
+    max-width: 80%;
+    background: white;
+    height: 80%;
+    overflow:scroll;
+    border-radius: 10px;
+}
+.meal-close {
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 1.1rem;
+    padding: 3px 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.close-con {
+    padding:1rem 0 1rem ;
+}
+.article-con {
+    padding: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/*========================== Fav ========================= */
+.fav-image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.fav-image > img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgb(62, 108, 154);
+}
+.favourite-con {
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+}
+.close {
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background:none;
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    background-color: black;
+    border-radius: 50%;
+    color: red;
+}
+.fav-contai {
+    position: relative;
+}
+.remove-btn {
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    background:none;
+    transition : all .2s;
+}
+.remove-btn:hover {
+    color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* ========================== Meal ====================== */
+.meal-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+.meal-img {
+    width: 100%;
+    cursor: pointer;
+}
+.meal-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.single-meal {
+    background-color: aliceblue;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.meals-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* =================== Loading ================== */
+.loading-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.loading-con >h2 {
+    font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* ========================= INput ===================== */
+
+.input-btn {
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+.suprise-btn {
+    background-color: rgb(198, 198, 255);
+    color: rgb(23, 23, 102);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+}
+.search-con {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.input-text {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(199, 199, 199);
+}
+.input-text:focus {
+    border: 2px solid rgb(151, 151, 251);
+}
+.input-btn::placeholder {
+    color: white;
+}
+.navbar {
+    padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.Error-con {
+    width: 100%;
+    height : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    }
+
+    .single-image {
+        width: 100%;
+        height: 80%;
+    }
+
+    .button-btn {
+        border: none;
+        cursor: pointer;
+        background-color: blue;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 10px;
+    }
+    .button-btn > a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .info {
+        padding: 10px;
+    }

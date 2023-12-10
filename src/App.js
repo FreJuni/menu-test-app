@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Meals from "./component/Meals";
+import Search from "./component/Search";
+import Model from "./component/Model";
+import Favourite from "./component/Favourite";
+import { GlobalContent } from "./context";
 
 function App() {
+  const { model } = GlobalContent();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="section-center">
+      <Search />
+      <Favourite />
+      <Meals />
+      {model && <Model />}
     </div>
   );
 }
